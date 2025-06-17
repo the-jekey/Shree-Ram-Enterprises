@@ -40,7 +40,7 @@ const Footer = () => {
                      </div>
                      <div className="part-3 w-full flex justify-between text-[10px]">
                             <h1>Copyright © 2025 Shree Ram Enterprises</h1>
-                            <h1>Crafted by jekey</h1>
+                            <h1>Crafted by <span>jekey</span></h1>
                      </div>
               </div>
        )
