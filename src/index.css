@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@font-face {
+       font-family: "font";
+       src: url(./assets/PPPangaia-Bold.otf);
+}
+
+
+:root {
+
+       --primary-color: #421e20;
+       --secondary-color: #dbb78f;
+}
