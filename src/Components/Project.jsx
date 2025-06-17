@@ -8,8 +8,8 @@ const Project = () => {
 
       <div className="text text-6xl w-full lg:text-[10vh] flex justify-center ">
         <div className="ext text-6xl w-full lg:text-8 xl mt-10 lg:w-[45%]">
-          <h1 className='text-start '>Feature</h1>
-          <h1 className=' text-end'>Project <span className='text-sm font-black'>(20+)</span></h1>
+        <h1 className='text-start '>Feature</h1>
+        <h1 className=' text-end'>Project <span className='text-sm font-black'>(20+)</span></h1> 
         </div>
       </div>
 

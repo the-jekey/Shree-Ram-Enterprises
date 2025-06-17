@@ -24,7 +24,7 @@ const Menu = () => {
               document.getElementById('Contact').scrollIntoView({ behavior: 'smooth' });
        };
        return (
-              <div className='h-screen relative max-w-screen mx-auto bg-[var(--primary-color)] text-[var(--secondary-color)] font-["font"]'>
+              <div className='h-screen max-w-screen mx-auto bg-[var(--primary-color)] text-[var(--secondary-color)] font-["font"]'>
                      <div className="top w-full h-12  py-10 px-6 flex items-center justify-end">
                             <span className='text-3xl font-black text-[var(--secondary-color)]'><TfiClose /> </span>
                      </div>

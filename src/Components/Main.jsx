@@ -5,12 +5,15 @@ import { motion } from 'framer-motion'
 import Animation from './Animation'
 import Button from './Button'
 
+import TextReveal from './TextReveal';
+
 const Main = () => {
+
        return (
               <div data-scroll data-scroll-speed="" className='h-[91vh] relative  overflow-hidden lg:h-screen max-w-screen mx-auto bg-[url("./image-1.jpg")] bg-cover bg-center bg-no-repeat  '>
                      <div id='Home' className="relative w-full h-[90.6%]">
                             <div className=" absolute z-100 w-full">
-                                   <Animation />
+                                   {/* <Animation /> */}
                             </div>
                             <GrainyFilter />
 
