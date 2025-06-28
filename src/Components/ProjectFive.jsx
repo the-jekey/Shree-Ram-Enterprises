@@ -23,6 +23,10 @@ const ProjectOne = () => {
                             <div className="img w-full h-40 ">
                                    <img className='h-full w-full object-cover ' src="./bench.jpg" alt="" />
                             </div>
+                            <div className=""></div>
+
+
+                            
                      </div>
               </div>
        )
