@@ -7,7 +7,7 @@ const Project = () => {
     <div id='Projects' className=' relative overflow-hidden max-w-7xl mx-auto px-6 pb-5 h-auto lg:min-h-screen font-["font"]  text-[var(--primary-color)] '>
 
       <div className="text text-6xl w-full lg:text-[10vh] flex justify-center ">
-        <div className="ext text-6xl w-full lg:text-8 xl mt-10 lg:w-[45%]">
+        <div className="ext text-6xl w-full lg:text-8xl mt-10 lg:w-[45%]">
         <h1 className='text-start '>Feature</h1>
         <h1 className=' text-end'>Project <span className='text-sm font-black'>(20+)</span></h1> 
         </div>

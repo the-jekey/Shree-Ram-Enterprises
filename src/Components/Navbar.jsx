@@ -40,18 +40,13 @@ const Navbar = () => {
                             </motion.span>
                      </motion.div>
                      <motion.div
-                            className="links gap-10 font-bold hidden md:inline-flex md:text-xl md:gap-10 lg:text-[16px]">
+                            className="links gap-10  md:inline-flex md:text-xl md:gap-10  lg:text-[16px]">
                             <a href="#Home" onClick={scrollToHome}><h1 className='cursor-pointer'>Home</h1></a>
                             <a href="#About" onClick={scrollToAbout}><h1 className='cursor-pointer'>About</h1></a>
                             <a href="#Projects" onClick={scrollToProjects}><h1 className='cursor-pointer'>Projects</h1></a>
                             <a href="#Contact" onClick={scrollToContact}><h1 className='cursor-pointer'>Contact us</h1></a>
                      </motion.div>
-                     <motion.div
-                            initial={{ opacity: 0, }}
-                            animate={{ opacity: 1, }}
-                            transition={{ duration: .5, delay: 2, }} className="menu text-3xl md:hidden ">
-                            <IoMenu />
-                     </motion.div>
+
               </div >
        )
 }

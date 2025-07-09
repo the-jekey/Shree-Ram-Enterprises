@@ -10,10 +10,10 @@ import TextReveal from './TextReveal';
 const Main = () => {
 
        return (
-              <div data-scroll data-scroll-speed="" className='h-[91vh] relative  overflow-hidden lg:h-screen max-w-screen mx-auto bg-[url("./image-1.jpg")] bg-cover bg-center bg-no-repeat  '>
+              <div data-scroll data-scroll-speed="" className='h-[91vh] relative  overflow-hidden lg:h-screen max-w-screen mx-auto bg-[url("")] bg-cover bg-center bg-no-repeat  '>
                      <div id='Home' className="relative w-full h-[90.6%]">
-                            <div className=" absolute z-100 w-full">
-                                   {/* <Animation /> */}
+                            <div className=" absolute z-10 w-full">
+                                   <Animation />
                             </div>
                             <GrainyFilter />
 
@@ -28,7 +28,7 @@ const Main = () => {
                                                                initial={{ y: 100, }}
                                                                animate={{ y: 0, }}
                                                                transition={{ delay: 1.9, duration: .3, }}
-                                                               className='inline-flex md:text-3xl lg:text-2xl'>Welcome</motion.span>
+                                                               className='inline-flex md:text-3xl lg:text-2xl'>Welcome to</motion.span>
                                                  </motion.p>
                                                  <motion.h1 className='text-6xl md:text-7xl lg:text-7xl overflow-hidden'>
                                                         <motion.span
@@ -44,7 +44,7 @@ const Main = () => {
                                                                initial={{ y: 100, }}
                                                                animate={{ y: 0, }}
                                                                transition={{ delay: 1.9, duration: .3, }}
-                                                               className='inline-flex'
+                                                               className='inline-flex tracking-wider'
                                                         >
                                                                We manufacture and deliver our products in all India and specialize in manufacturing custom designs.
                                                         </motion.span>
@@ -66,7 +66,7 @@ const Main = () => {
                                                  initial={{ opacity: 0, }}
                                                  animate={{ opacity: 1, }}
                                                  transition={{ delay: 1.9, duration: .4, }}
-                                                 className='text-sm text-center  text-[var(--secondary-color)] lg' >(Scroll Down)</motion.p>
+                                                 className='text-sm text-center  text-[var(--primary-color)] lg' >(Scroll Down)</motion.p>
                                    </div>
                             </div>
                      </div>

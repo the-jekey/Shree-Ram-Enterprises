@@ -1,48 +1,45 @@
 import React from 'react'
-
+import { MdArrowOutward } from "react-icons/md";
 const Footer = () => {
        return (
-              <div className='w-full h-screen flex flex-col justify-between px-6 py-8 font-["font"] bg-[var(--secondary-color)] text-[var(--primary-color)]'>
-                     <div className="part-1 w-full mb-8">
-                            <div className="links flex flex-col gap-2 text-xl">
-                                   <h1>Home</h1>
-                                   <h1>About</h1>
-                                   <h1>Projects</h1>
-                                   <h1>Products</h1>
-                                   <h1>Contact us</h1>
+              <>
+                     <footer className='h-screen w-full bg-zinc-  font-[font] text-[var(--primary-color)] px-4 flex flex-col justify-between '>
+                            <div className="top text-4xl py-2 w-full">
+                                   <h1 className='flex'>Get In Touch <span><MdArrowOutward /></span> </h1>
                             </div>
-                     </div>
-                     <div className="part-2 w-full mb-8">
-                            <div className="links flex w-full justify-between">
-                                   <div className="one text-[13px] flex flex-col gap-2">
-                                          <a href="https://api.whatsapp.com/send/?phone=%2B919928538820&text&type=phone_number&app_absent=0"> <h1>whatsapp</h1></a>
-                                          <a href="https://www.instagram.com/sre.org.in/"> <h1>Instagram</h1></a>
-                                          <a href="https://www.facebook.com/sre.org.in"> <h1>Facebook</h1></a>
+                            <div className="links w-full  h-[20vh] flex gap-2  ">
+                                   <div className="menu w-1/2">
+                                          <h1 className='border-b-1 lg:w-[60%] '>Menu</h1>
+                                          <div className="text-sm flex flex-col gap-1">
+                                                 <p className='hover:border-b-1 w-fit cursor-pointer'>Home</p>
+                                                 <p className='hover:border-b-1 w-fit cursor-pointer'>About</p>
+                                                 <p className='hover:border-b-1 w-fit cursor-pointer'>Projects</p>
+                                                 <p className='hover:border-b-1 w-fit cursor-pointer'>Products</p>
+                                                 <p className='hover:border-b-1 w-fit cursor-pointer'>Contact us</p>
+                                          </div>
                                    </div>
-                                   <div className="two text-[13px] flex flex-col gap-2">
-                                          <a href="tel:+919929538820">
-                                                 <h1>P: +91 9929538820</h1>
-                                          </a>
-
-                                          <a href="mailto:Sretinwari@gmail.com">
-                                                 <h1>E: Sretinwari@gmail.com</h1>
-                                          </a>
-
-                                          <a
-                                                 href="https://www.google.com/maps/search/?api=1&query=Tinwari+Jodhpur+342306+Rajasthan"
-                                                 target="_blank"
-                                                 rel="noopener noreferrer"
-                                          >
-                                                 <h1>A: Tinwari Jodhpur (342306), Rajasthan</h1>
-                                          </a>
+                                   <div className="social w-1/2">
+                                          <h1 className='border-b-1 lg:w-[60%] '>Social</h1>
+                                          <div className="text-sm flex flex-col gap-1 ">
+                                                 <p className='hover:border-b-1 w-fit cursor-pointer'>Whatsapp</p>
+                                                 <p className='hover:border-b-1 w-fit cursor-pointer'>Instagram</p>
+                                                 <p className='hover:border-b-1 w-fit cursor-pointer'>Facebook</p>
+                                                 <p className='hover:border-b-1 w-fit cursor-pointer'>Linkedin</p>
+                                                 <p className='hover:border-b-1 w-fit cursor-pointer'>X</p>
+                                          </div>
                                    </div>
+
                             </div>
-                     </div>
-                     <div className="part-3 w-full flex justify-between text-[10px]">
-                            <h1>Copyright © 2025 Shree Ram Enterprises</h1>
-                            <h1>Crafted by <span>jekey</span></h1>
-                     </div>
-              </div>
+                            <div className="">
+                                   <h1 className='text-9xl leading-18'>SRE&copy;</h1>
+                                   <p className='text-sm'>( Stone Art Company )</p>
+                            </div>
+                            <div className="bottom pb-3 text-sm flex justify-between">
+                                   <h1 className=']'>Copyright © 2025 <br /> Shree Ram Enterprises</h1>
+                                   <h1 className='hover:border-b-1 w-fit cursor-pointer'  > <br /> Crafted by <a href="https://www.instagram.com/the_jekeyy/"><span>jekey</span></a></h1>
+                            </div>
+                     </footer>
+              </>
        )
 }
 

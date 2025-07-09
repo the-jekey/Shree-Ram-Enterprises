@@ -5,6 +5,7 @@ import Footer from './Components/Footer';
 import Project from './Components/Project';
 import Menu from './Components/Menu';
 import LocomotiveScroll from 'locomotive-scroll';
+import Product from './Components/Product';
 
 
 
@@ -17,6 +18,7 @@ const App = () => {
       {/* <Menu /> */}
       <Main />
       <About />
+      <Product />
       <Project />
       <Footer />
 

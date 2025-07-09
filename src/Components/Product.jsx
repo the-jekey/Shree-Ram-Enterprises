@@ -2,14 +2,17 @@ import React from 'react'
 
 const Product = () => {
        return (
-              <div className='h-auto pb-5 max-w-screen mx-auto  font-["font"]'>
-                     <div className="txt w-full">
-                            <h1 className='text-center text-6xl py-5'>Our Products</h1>
-                            <h2></h2>
+              <div className='h-screen bg-gray-600 px-6 pb-5 max-w-screen mx-auto  font-["font"]'>
+                     <div className="text text-6xl w-full lg:text-[10vh] flex justify-center ">
+                            <div className="ext text-6xl w-full lg:text-8xl mt-10 lg:w-[37%]">
+                                   <h1 className='text-start '>Our</h1>
+                                   <h1 className=' text-end'>Product <span className='text-sm font-black tracking-wider'>(20+)</span></h1>
+                            </div>
                      </div>
-                     <div className="product w-full h-screen bg-zinc-300 ">
+                     <div className="product">
 
                      </div>
+
 
 
               </div>
