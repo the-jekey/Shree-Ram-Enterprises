@@ -2,6 +2,7 @@ import React from 'react'
 import '../index.css';
 import { motion } from 'motion/react';
 import { IoMenu } from "react-icons/io5";
+import TextReveal from './TextReveal';
 
 const Navbar = () => {
        const scrollToHome = (e) => {
@@ -30,31 +31,45 @@ const Navbar = () => {
               <div className=" h-16 max-w-screen mx-auto text-[var(--primary-color)] font-['font']  px-6 py-6 flex justify-between">
                      <motion.div className=" relative name h-8 flex gap-1 items-center font-['font']">
                             <a href="/home">
+                                   <TextReveal delay={0.2}>
+                                          <motion.h1
+                                                 className='font-black cursor-pointer text-3xl md:text-5xl lg:text-3xl relative inline '>
+                                                 SRE
+                                          </motion.h1>
+                                   </TextReveal>
+                            </a>
+                            <TextReveal delay={0.2}>
 
-
-                                   <motion.h1
+                                   <motion.span
                                           initial={{ opacity: 0, }}
                                           animate={{ opacity: 1, }}
                                           transition={{ duration: .5, delay: 2.1, }}
-                                          className='font-black cursor-pointer text-3xl md:text-5xl lg:text-3xl relative inline '>
-                                          SRE
-                                   </motion.h1>
-                            </a>
-                            <motion.span
-                                   initial={{ opacity: 0, }}
-                                   animate={{ opacity: 1, }}
-                                   transition={{ duration: .5, delay: 2.1, }}
-                                   className='text-sm relative top-1 md:text-xl lg:text-sm'>
-                                   (Stone Art)
-                            </motion.span>
+                                          className='text-sm relative top-1 md:text-xl lg:text-sm'>
+                                          (Stone Art)
+                                   </motion.span>
+                            </TextReveal>
                      </motion.div>
                      <motion.div
                             className="links gap-10   md:inline-flex md:text-xl md:gap-10  lg:text-[16px]">
-                            <a href="#Home" onClick={scrollToHome}><h1 className='cursor-pointer'>Home</h1></a>
-                            <a href="#About" onClick={scrollToAbout}><h1 className='cursor-pointer'>About</h1></a>
-                            <a href="#Product" onClick={scrollToProduct}><h1 className='cursor-pointer'>Product</h1></a>
-                            <a href="#Projects" onClick={scrollToProjects}><h1 className='cursor-pointer'>Projects</h1></a>
-                            <a href="#Contact" onClick={scrollToContact}><h1 className='cursor-pointer'>Contact us</h1></a>
+                            <TextReveal delay={0.2}>
+                                   <a href="#Home" onClick={scrollToHome}><h1 className='cursor-pointer'>Home</h1></a>
+                            </TextReveal>
+                            <TextReveal delay={0.2} >
+
+                                   <a href="#About" onClick={scrollToAbout}><h1 className='cursor-pointer'>About</h1></a>
+                            </TextReveal>
+                            <TextReveal delay={0.2} >
+
+                                   <a href="#Product" onClick={scrollToProduct}><h1 className='cursor-pointer'>Product</h1></a>
+                            </TextReveal>
+                            <TextReveal delay={0.2} >
+
+                                   <a href="#Projects" onClick={scrollToProjects}><h1 className='cursor-pointer'>Projects</h1></a>
+                            </TextReveal>
+                            <TextReveal delay={0.2} >
+
+                                   <a href="#Contact" onClick={scrollToContact}><h1 className='cursor-pointer'>Contact us</h1></a>
+                            </TextReveal>
                      </motion.div>
 
               </div >

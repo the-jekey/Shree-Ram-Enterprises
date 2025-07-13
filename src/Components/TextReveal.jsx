@@ -1,60 +1,85 @@
-import React, { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// TextReveal.jsx
+import React, { useRef } from "react";
+import gsap from "gsap";
+import { SplitText } from "gsap/SplitText";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(SplitText, ScrollTrigger);
 
-const TextReveal = ({ children, className = '' }) => {
+const TextReveal = ({ children, animateOnScroll = true, delay = 0 }) => {
   const containerRef = useRef(null);
+  const splitRef = useRef([]);
+  const lines = useRef([]);
 
-  useEffect(() => {
-    const items = containerRef.current.querySelectorAll('.mask');
+  useGSAP(() => {
+    if (!containerRef.current) return;
 
-    gsap.fromTo(
-      items,
-      { yPercent: 100 },
-      {
-        yPercent: 0,
-        duration: 1,
-        delay: 2,
-        ease: 'power4.out',
-        stagger: 0.1,
+    splitRef.current = [];
+    lines.current = [];
+
+    let elements = containerRef.current.hasAttribute("data-copy-wrapper")
+      ? Array.from(containerRef.current.children)
+      : [containerRef.current];
+
+    elements.forEach((element) => {
+      const split = SplitText.create(element, {
+        type: "lines",
+        mask: "lines",
+        linesClass: "line++",
+      });
+
+      splitRef.current.push(split);
+
+      const computedStyle = window.getComputedStyle(element);
+      const textIndent = computedStyle.textIndent;
+
+      if (textIndent && textIndent !== "0px") {
+        if (split.lines.length > 0) {
+          split.lines[0].style.paddingLeft = textIndent;
+        }
+        element.style.textIndent = "0";
+      }
+
+      lines.current.push(...split.lines);
+    });
+
+    gsap.set(lines.current, { y: "100%" });
+
+    const animationProps = {
+      y: "0%",
+      duration: 1,
+      stagger: 0.1,
+      ease: "power4.out",
+      delay: delay,
+    };
+
+    if (animateOnScroll) {
+      gsap.to(lines.current, {
+        ...animationProps,
         scrollTrigger: {
           trigger: containerRef.current,
-          start: 'top 85%',
-          toggleActions: 'play none none reverse',
+          start: "top 75%",
+          once: true,
         },
-      }
-    );
-  }, []);
-
-  // Split children into words and wrap in spans
-  const wrapWords = (node) => {
-    if (typeof node === 'string') {
-      return node.split(' ').map((word, i) => (
-        <span key={i} className="mask overflow-hidden inline-block mr-1">
-          <span className="inline-block">{word}</span>
-        </span>
-      ));
-    }
-
-    if (React.isValidElement(node)) {
-      return React.cloneElement(node, {
-        children: wrapWords(node.props.children),
       });
+    } else {
+      gsap.to(lines.current, animationProps);
     }
 
-    if (Array.isArray(node)) {
-      return node.map((child, i) => <React.Fragment key={i}>{wrapWords(child)}</React.Fragment>);
-    }
+    return () => {
+      splitRef.current.forEach((split) => split && split.revert());
+    };
+  }, [animateOnScroll, delay]);
 
-    return node;
-  };
+  if (React.Children.count(children) === 1) {
+    return React.cloneElement(children, { ref: containerRef });
+  }
 
   return (
-    <h1 className={className} ref={containerRef}>
-      {wrapWords(children)}
-    </h1>
+    <div ref={containerRef} data-copy-wrapper="true">
+      {children}
+    </div>
   );
 };
 

@@ -11,3 +11,7 @@
        --primary-color: #421e20;
        --secondary-color: #dbb78f;
 }
+.line {
+  transform: translateY(100%);
+  will-change: transform;
+} 
