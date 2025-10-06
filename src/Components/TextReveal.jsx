@@ -1,5 +1,5 @@
 // TextReveal.jsx
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import gsap from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -7,14 +7,16 @@ import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-const TextReveal = ({ children, animateOnScroll = true, delay = 0 }) => {
+const TextReveal = ({ children, animateOnScroll = true, delay = 0, trigger = false }) => {
   const containerRef = useRef(null);
   const splitRef = useRef([]);
   const lines = useRef([]);
 
-  useGSAP(() => {
+  const runAnimation = () => {
     if (!containerRef.current) return;
 
+    // Clean up existing splits if any
+    splitRef.current.forEach((split) => split && split.revert());
     splitRef.current = [];
     lines.current = [];
 
@@ -66,11 +68,17 @@ const TextReveal = ({ children, animateOnScroll = true, delay = 0 }) => {
     } else {
       gsap.to(lines.current, animationProps);
     }
+  };
 
-    return () => {
-      splitRef.current.forEach((split) => split && split.revert());
-    };
-  }, [animateOnScroll, delay]);
+  // 👇 Runs once for scroll-based animation
+  useGSAP(() => {
+    if (animateOnScroll) runAnimation();
+  }, []);
+
+  // 👇 Runs when menu (or any manual trigger) becomes true
+  useEffect(() => {
+    if (!animateOnScroll && trigger) runAnimation();
+  }, [trigger]);
 
   if (React.Children.count(children) === 1) {
     return React.cloneElement(children, { ref: containerRef });

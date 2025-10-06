@@ -6,20 +6,20 @@ import Project from './Components/Project';
 import Product from './Components/Product';
 import LocomotiveScroll from 'locomotive-scroll';
 import Animation from './Components/Animation';
+import MenU from './Components/Menu';
 
 const App = () => {
+  const [Menu, setMenu] = useState(false)
+
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Disable scroll during loading
     document.body.style.overflow = 'hidden';
 
-    // Simulate loading time (e.g. 3 seconds)
     const timer = setTimeout(() => {
       setLoading(false);
-      document.body.style.overflow = 'auto'; // Enable scroll after loading
+      document.body.style.overflow = 'auto';
 
-      // Initialize Locomotive Scroll after loading completes
       new LocomotiveScroll();
     }, 2000);
 
@@ -30,12 +30,13 @@ const App = () => {
     <>
       {loading ? (
         <div className="loading-screen">
-         <Animation/>
+          <Animation />
         </div>
       ) : (
         <div className='max-w-screen mx-auto selection:bg-[var(--primary-color)] selection:text-[var(--secondary-color)]'>
+          <MenU Menu={Menu} setMenu={setMenu} />
           <Main />
-          <About />
+          <About Menu={Menu} setMenu={setMenu} />
           <Product />
           <Project />
           <Footer />

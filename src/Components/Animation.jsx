@@ -52,8 +52,8 @@ const Animation = () => {
           // Exit animation after text animation completes
           gsap.to(containerRef.current, {
             y: '-100%',
-            duration: 1.2,
-            ease: "power3.inOut",
+            duration:1,
+            ease: "power4.inOut",
             delay: 0.5
           })
         }
@@ -65,7 +65,7 @@ const Animation = () => {
 
   return (
     <div ref={containerRef} className=' relative h-[92vh]  lg:h-screen max-w-screen mx-auto bg-[var(--primary-color)] font-["font"] text-[var(--secondary-color)]'>
-      <div className="part-1 h-[1%]"><div ref={lineRef} className=" absolute left-0 line h-1 top-0 rounded-md bg--700 w-[0%] bg-[var(--secondary-color)]"></div></div>
+      <div className="part-1 h-[1%]"><div ref={lineRef} className=" absolute left-0 -top-1.5 line h-1 rounded-md w-[0%] bg-[var(--secondary-color)]"></div></div>
       <div className="part-2 w-full h-[95%] flex justify-center items-center">
         <h1 ref={textRef} className='overflow-hidden h-46 text-[20vh] txt flex'>
           <span>S</span>

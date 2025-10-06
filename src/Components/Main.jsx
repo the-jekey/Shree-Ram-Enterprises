@@ -6,7 +6,7 @@ import Animation from './Animation'
 import Button from './Button'
 import TextReveal from './TextReveal';
 
-const Main = () => {
+const Main = (props) => {
 
        return (
               <div data-scroll data-scroll-speed="" className='h-[91vh] relative  overflow-hidden lg:h-screen max-w-screen mx-auto bg-[url("")] bg-cover bg-center bg-no-repeat  '>
@@ -21,7 +21,7 @@ const Main = () => {
                                    <div className="text h-[60vh]  w-full flex justify-center py-[20vh] md:py-[35vh] lg:py-[25vh] ">
                                           <div className="name font-['font'] text-[var(--primary-color)] text-center">
                                                  <p className='overflow-hidden'>
-                                                        <TextReveal delay={0.1}>
+                                                        <TextReveal delay={0.5}>
                                                                <span
 
                                                                       className='inline-flex md:text-3xl lg:text-2xl'>Welcome to</span>
@@ -54,7 +54,7 @@ const Main = () => {
                                                                href="https://api.whatsapp.com/send?phone=919782738820&text=Hi%20I'm%20interested%20in%20your%20services"
                                                                target='_blank'
                                                                rel="noopener noreferrer"
-                                                               className='cursor-pointer hover:opacity-90 transition-opacity'
+                                                               className='cursor-pointer  transition-opacity'
                                                         >
                                                                <Button />
                                                         </a>
