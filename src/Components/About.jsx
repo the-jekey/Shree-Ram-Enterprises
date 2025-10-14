@@ -52,7 +52,7 @@ const About = (props) => {
 
        return (
               <div className=" relative">
-                     <div className="w-full flex justify-end items-center p-6">
+                     <div className="w-full flex justify-end items-center">
                             <div className="group">
                                    <div
                                           ref={Menu}

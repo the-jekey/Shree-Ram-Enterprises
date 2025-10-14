@@ -9,8 +9,8 @@ import TextReveal from './TextReveal';
 const Main = (props) => {
 
        return (
-              <div data-scroll data-scroll-speed="" className='h-[91vh] relative  overflow-hidden lg:h-screen max-w-screen mx-auto bg-[url("")] bg-cover bg-center bg-no-repeat  '>
-                     <div id='Home' className="relative w-full h-[90.6%]">
+              <div data-scroll data-scroll-speed="" className='h-screen relative  overflow-hidden lg:h-screen max-w-screen mx-auto bg-[url("")] bg-cover bg-center bg-no-repeat  '>
+                     <div id='Home' className="relative w-full h-screen">
 
                             <GrainyFilter />
 
