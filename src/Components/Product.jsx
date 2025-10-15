@@ -6,12 +6,7 @@ import TextReveal from './TextReveal';
 const Product = () => {
 
 
-       const PDFONE = () => {
-              window.open('./SRE02.pdf', '_blank');
-       };
-       const PDFTWO = () => {
-              window.open('./SRE01.pdf', '_blank');
-       };
+
 
        return (
               <div id='Product' className='h-auto lg:pb-20 px-6 pb-5 text-[var(--primary-color)] max-w-screen mx-auto  font-["font"]'>
@@ -42,7 +37,7 @@ const Product = () => {
                                           </div>
                                    </div>
                                    <div className="one w-1/2 h-full rounded-md ">
-                                          <div onClick={PDFTWO} className="img w-full h-[92%]">
+                                          <div className="img w-full h-[92%]">
                                                  <img className='w-full h-full rounded-md object-cover' src="./Wall Panel.jpg" alt="" />
                                           </div>
                                           <div className="txt w-full flex justify-between md:text-xl">
@@ -59,7 +54,7 @@ const Product = () => {
                             </div>
                             <div className="product w-full md:w-[80%] lg:w-[40%] lg:h-[40vh] lg:m-0 md:mx-auto h-[30vh] flex lg:gap-5 gap-2 ">
                                    <div className="one w-1/2 h-full rounded-md ">
-                                          <div onClick={PDFONE} className="img  w-full h-[92%]">
+                                          <div className="img  w-full h-[92%]">
                                                  <img className='w-full h-full rounded-md object-cover' src="./Jali.jpg" alt="" />
                                           </div>
                                           <div className="txt w-full flex justify-between md:text-xl">
@@ -72,7 +67,7 @@ const Product = () => {
                                           </div>
                                    </div>
                                    <div className="one w-1/2 h-full rounded-md ">
-                                          <div onClick={PDFTWO} className="img w-full h-[92%]">
+                                          <div className="img w-full h-[92%]">
                                                  <img className='w-full h-full rounded-md object-cover' src="./Wall.jpg" alt="" />
                                           </div>
                                           <div className="txt w-full flex justify-between md:text-xl">
