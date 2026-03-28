@@ -1,10 +1,7 @@
 import React from 'react'
 import { Route, BrowserRouter, Routes } from 'react-router-dom'
 import Main from '../Components/Main'
-import About from '../Components/About'
-import Project from '../Components/Project'
-import Product from '../Components/Product'
-import ProductTwo from '../Components/Projects/ProductTwo'
+import ProductOne from '../Products/ProductOne'
 
 const Routing = () => {
        return (
@@ -12,9 +9,7 @@ const Routing = () => {
                      <BrowserRouter>
                             <Routes>
                                    <Route path="/" element={<Main />} />
-                                   <Route path="/about" element={<About />} />
-                                   <Route path="/project" element={<Project />} />
-                                   <Route path="/product" element={<ProductTwo />} />
+                                   <Route path="/product-one" element={<ProductOne />} />
                             </Routes>
                      </BrowserRouter>
               </div>

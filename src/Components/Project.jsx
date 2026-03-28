@@ -1,9 +1,15 @@
 import React from 'react'
 import { IoIosArrowRoundForward } from "react-icons/io";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import TextReveal from './TextReveal';
 
 const Project = () => {
+  const navigate = useNavigate();
+
+
+  const ProjectOne = () => {
+    navigate('/projectone');
+  }
 
 
 
@@ -22,7 +28,7 @@ const Project = () => {
         </div>
       </div>
 
-      <div className="project-1 w-full h-[45vh] md:h-[55vh] mt-2 flex gap-4 md:gap-8 justify-between bg--500 lg:h-[90vh] ">
+      <div onClick={ProjectOne} className="project-1 w-full h-[45vh] md:h-[55vh] mt-2 flex gap-4 md:gap-8 justify-between bg--500 lg:h-[90vh] ">
         <div className="part-1 h-[40vh]  w-[45vw] md:w-[55vw] md:h-[50vh] lg:h-[100%]">
           <div className="img w-full h-[95%] cursor-pointer ">
             <img className='w-full h-full  object-cover ' src="./Project-1.png" alt="" />
@@ -56,11 +62,7 @@ const Project = () => {
       </div>
 
 
-
-
-
-
-      <div className="project-1 w-full h-[35vh] md:h-[55vh] flex gap-4 md:gap-8 justify-center bg--500 lg:h-[90vh] ">
+      <div className="project-2 w-full h-[35vh] md:h-[55vh] flex gap-4 md:gap-8 justify-center bg--500 lg:h-[90vh] ">
         <div className="part-1 h-[30vh]  w-full md:w-full md:h-[100%] lg:w-full lg:h-[100%]">
           <div className="img w-full h-[95%] cursor-pointer">
             <img className='w-full h-full  object-cover ' src="./Project-2.png" alt="" />
@@ -71,7 +73,7 @@ const Project = () => {
               <h1>Project-3</h1>
             </TextReveal>
             <TextReveal delay={0.2}>
-              <h1>200Crore</h1>
+              <h1>2025</h1>
 
             </TextReveal>
           </div>
@@ -79,14 +81,10 @@ const Project = () => {
       </div>
 
 
+      <div className="project-3 w-full h-[45vh] md:h-[55vh] mt-2 flex gap-4 md:gap-8 justify-between bg--500 lg:h-[90vh] ">
 
 
-
-
-      <div className="project-1 w-full h-[45vh] md:h-[55vh] mt-2 flex gap-4 md:gap-8 justify-between bg--500 lg:h-[90vh] ">
-
-
-        <div className="part-1 h-[15vh] w-[40vw] md:w-[50vw] lg:h-[45vh]">
+        <div className="project-4 h-[15vh] w-[40vw] md:w-[50vw] lg:h-[45vh]">
           <div className="img w-full h-[90%] cursor-pointer">
             <img className='w-full h-full  object-cover bg-center ' src="./Project-3.png" alt="" />
           </div>
@@ -100,12 +98,14 @@ const Project = () => {
             </TextReveal>
           </div>
 
-          <Link to='/product'>
+          <Link to='/projectone'>
             <div className='text-6xl text-[var(--secondary-color)] cursor-pointer bg-[var(--primary-color)] hover:bg-[var(--secondary-color)] hover:text-[var(--primary-color)] transition-all rounded-full w-fit p-10 lg:p-20 relative top-10 left-7'> <IoIosArrowRoundForward /> </div>
           </Link>
 
         </div>
-        <div className="part-2 h-[40vh]  w-[45vw] md:w-[55vw] md:h-[50vh] lg:h-[100%]">
+
+
+        <div className="project-5 h-[40vh]  w-[45vw] md:w-[55vw] md:h-[50vh] lg:h-[100%]">
           <div className="img w-full h-[95%] cursor-pointer">
             <img className='w-full h-full  object-cover ' src="./Project-5.png" alt="" />
           </div>
@@ -121,9 +121,6 @@ const Project = () => {
           </div>
         </div>
       </div>
-
-
-
 
     </div>
   )

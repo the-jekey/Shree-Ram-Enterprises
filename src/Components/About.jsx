@@ -13,7 +13,7 @@ const About = (props) => {
        console.log(props.Menu);
        useGSAP(() => {
               gsap.to(Menu.current, {
-                     scale: 1,
+
                      opacity: 1,
                      duration: 0.5,
                      ease: "power4.inOut",
@@ -57,17 +57,17 @@ const About = (props) => {
                                    <div
                                           ref={Menu}
                                           onClick={MenuOpen}
-                                          className="size-15 transition-all ease-in-out hover:scale-105 z-50 top-2 right-4 scale-0 opacity-0 fixed rounded-full bg-[var(--secondary-color)] cursor-pointer flex flex-col items-center justify-center gap-1"
+                                          className="size-10 transition-all ease-in-out hover:scale-105 z-50 top-2 right-4 opacity-0 fixed rounded-full bg-[var(--secondary-color)] cursor-pointer flex flex-col items-center justify-center gap-1"
                                    >
                                           {props.Menu ? (
                                                  <>
-                                                        <div className="h-1 w-[60%] group-hover:w-[40%] transition-all duration-700 ease-in-out rotate-45 bg-[#713336]"></div>
-                                                        <div className="h-1 w-[60%] group-hover:w-[40%] transition-all duration-700 ease-in-out -rotate-45 bg-[#713336]"></div>
+                                                        <div className="absolute h-0.5 w-[40%] transition-all duration-700 ease-in-out rotate-45 bg-[#713336]"></div>
+                                                        <div className="absolute h-0.5 w-[40%] transition-all duration-700 ease-in-out -rotate-45 bg-[#713336]"></div>
                                                  </>
                                           ) : (
                                                  <>
-                                                        <div className="h-1 w-[60%]  group-hover:w-[40%]  transition-all duration-700 ease-in-out bg-[#713336]"></div>
-                                                        <div className="h-1 w-[60%]  group-hover:w-[40%]  transition-all duration-700 ease-in-out bg-[#713336]"></div>
+                                                        <div className="h-0.5 w-[40%] group-hover:w-[40%] transition-all duration-700 ease-in-out bg-[#713336]"></div>
+                                                        <div className="h-0.5 w-[40%] group-hover:w-[40%] transition-all duration-700 ease-in-out bg-[#713336]"></div>
                                                  </>
                                           )}
                                    </div>

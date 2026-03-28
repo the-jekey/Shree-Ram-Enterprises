@@ -9,7 +9,7 @@ const Animation = () => {
   const textRef = useRef(null)
   const loadingRef = useRef(null)
   const containerRef = useRef(null)
-  
+
 
   useEffect(() => {
     const timeline = gsap.timeline()
@@ -52,7 +52,7 @@ const Animation = () => {
           // Exit animation after text animation completes
           gsap.to(containerRef.current, {
             y: '-100%',
-            duration:1,
+            duration: 1,
             ease: "power4.inOut",
             delay: 0.5
           })
@@ -60,7 +60,7 @@ const Animation = () => {
       }
     )
 
-    
+
   }, [])
 
   return (

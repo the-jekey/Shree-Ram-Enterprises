@@ -30,7 +30,7 @@ const Navbar = () => {
        return (
               <div className=" h-16 max-w-screen mx-auto text-[var(--primary-color)] font-['font']  px-6 py-6 flex justify-between">
                      <motion.div className=" relative name h-8 flex gap-1 items-center font-['font']">
-                            <a href="/home">
+                            <a href="/">
                                    <TextReveal delay={0.2}>
                                           <motion.h1
                                                  className='font-black cursor-pointer text-3xl md:text-5xl lg:text-3xl relative inline '>
@@ -50,7 +50,7 @@ const Navbar = () => {
                             </TextReveal>
                      </motion.div>
                      <motion.div
-                            className="links gap-10   md:inline-flex md:text-xl md:gap-10  lg:text-[16px]">
+                            className="links gap-10 hidden md:inline-flex md:text-xl md:gap-10  lg:text-[16px]">
                             <TextReveal delay={0.2}>
                                    <a href="#Home" onClick={scrollToHome}><h1 className='cursor-pointer'>Home</h1></a>
                             </TextReveal>

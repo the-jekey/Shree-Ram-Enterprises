@@ -79,7 +79,7 @@ const Footer = () => {
                             <div className="bottom pb-3 lg:pb-0 text-sm flex justify-between">
                                    <TextReveal delay={0.2} animateOnScroll={false}>
                                           <h1 className=']'>
-                                                 Copyright © 2025 <br /> Shree Ram Enterprises
+                                                 Copyright © 2025 <br /> Shree Ram Enterprises 
                                           </h1>
                                    </TextReveal>
 
